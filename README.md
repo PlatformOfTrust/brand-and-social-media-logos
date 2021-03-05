@@ -9,10 +9,12 @@ If you want to use the images by _**uploading those to some systems**_, (e.g. cr
 ![download image from GitHub repo](https://raw.githubusercontent.com/PlatformOfTrust/brand-and-social-media-logos/main/misc/github-download-image.png)<br/>
 
 If you want to use the image as part of `HTML` _**email templates**_, simply copy and paste the raw URL of the image, provided by GitHub, within `<img>` tags. 
-Use `alt`text within the `img` tag to provide description of the image used.
-Example `alt` text: "Platform of Trust logo", or, "Platform of Trust LinkedIn"
+
 ![Use raw image from GitHub](https://raw.githubusercontent.com/PlatformOfTrust/brand-and-social-media-logos/main/misc/github-open-image-new-url.png)<br/>
 ![Copy & paste the URL in html img tag](https://github.com/PlatformOfTrust/brand-and-social-media-logos/blob/main/misc/github-raw-image-url.png)<br/>
+
+Use `alt`text within the `img` tag to provide description of the image used.
+Example `alt` text: "Platform of Trust logo", or, "Platform of Trust LinkedIn"
 
 
 ### Credit
