@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "04997a78-a989-4233-a6ff-7111528becba",
+		"name": "Persona API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14817669"
+	},
+	"item": [
+		{
+			"name": "Obtain access token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic QCFGMjQ1LjgyMDcuMDJEMi5BQTRFITAwMDEhRUY4OC44NEI0ITAwMDghMUNFMi5ERkU1LkExRTEuQ0ZDNTp6ejNXS0t3aWRwaDd5YVlSWnpUMEc4OEI=",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "person_authority_reporting_get",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://auth.beta.vaultit.org/auth/token",
+					"protocol": "https",
+					"host": [
+						"auth",
+						"beta",
+						"vaultit",
+						"org"
+					],
+					"path": [
+						"auth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get person information",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJraWQiOiI2YjY1MmJhZC0zNjhiLTRjZGEtYjhjZC1mMzExZjU1YWEwZmIiLCJ0eXAiOiJKV1QiLCJhbGciOiJSUzUxMiJ9.eyJpc3MiOiJodHRwczovL2F1dGguYmV0YS52YXVsdGl0Lm9yZyIsImF1ZCI6IkAhRjI0NS44MjA3LjAyRDIuQUE0RSEwMDAxIUVGODguODRCNCEwMDA4ITFDRTIuREZFNS5BMUUxLkNGQzUiLCJzY29wZSI6InBlcnNvbl9hdXRob3JpdHlfcmVwb3J0aW5nX2dldCIsImNsaWVudF9pZCI6IkAhRjI0NS44MjA3LjAyRDIuQUE0RSEwMDAxIUVGODguODRCNCEwMDA4ITFDRTIuREZFNS5BMUUxLkNGQzUiLCJ0b2tlbl90eXBlIjoiYmVhcmVyIiwiZXhwIjoxNjYxNDI3MDg4LCJpYXQiOjE2NjE0MTI2ODgsInN1YiI6IkAhRjI0NS44MjA3LjAyRDIuQUE0RSEwMDAxIUVGODguODRCNCEwMDA4ITFDRTIuREZFNS5BMUUxLkNGQzUifQ.Tlkp1dInvdOU0XDEcsw5ZNJivhNkyNx1Z5XKiWniUC40r9eV0612U68k---hQlfSs25YXpzEg8NNgJubLBU8stJVozm1_kcI2jaWKEFxMsAqdD8BbIKL7dcIdz588ml5s8LmqHd-NLTjhs6ajn68P0_JtRIKE1uEkrTl5vhNjyn6ONma6OcrMH_rs8I3xf7vpqbPZiFlNyC65gikeMLQPIKkY5OSV0WVnDYBg-R8FUN4bJjO8ivhwFexGaoa8eiqQo01s2UfMoyWuVFMByqo_tTFMal1B_CmcoCAV82ZfZCwGyAMUK9z-fGyupHZq2ZvSZ2B4z2n7fGMoHa-RAnDaw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "id-country",
+						"value": "FI",
+						"type": "text"
+					},
+					{
+						"key": "id-type",
+						"value": "card_barcode",
+						"type": "text"
+					},
+					{
+						"key": "id-value",
+						"value": "702225365136",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://personapi.beta.tilaajavastuu.fi/api/v1/persons/authority_report",
+					"protocol": "https",
+					"host": [
+						"personapi",
+						"beta",
+						"tilaajavastuu",
+						"fi"
+					],
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"authority_report"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
